@@ -1,19 +1,26 @@
 body {
     font-family: sans-serif;
-    margin: 0 50px;
+    margin: 0;
     background-color: #e5e5e5;
     overflow: hidden;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    
     height: 100vh;
+}
+
+.container {
+    display: flex;
+}
+
+.menu {
+    background-color: lightgrey;
+    height: 100%;
+    padding: 16px;
 }
 
 .app {
     background-color: #ffffff;
     width: 300px;
-    height: 500px;
-
     border-radius: 8px;
     padding: 15px;
 }
@@ -60,4 +67,9 @@ body {
 
 #tasks div .options i {
     cursor: pointer;
+}
+
+i img {
+    height: 18px;
+    vertical-align: top;
 }

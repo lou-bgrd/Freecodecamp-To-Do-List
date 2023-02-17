@@ -6,6 +6,7 @@ let textarea = document.getElementById("textarea");
 let msg = document.getElementById("msg");
 let tasks = document.getElementById("tasks");
 let add = document.getElementById("add");
+let delete_all = document.getElementById("btn_deleteall")
 
 // Validation formulaire (ne peut pas être vide)
 form.addEventListener("submit", (e) => {
@@ -37,6 +38,7 @@ let acceptData = () => {
         text: textInput.value,
         date: dateInput.value,
         description: textarea.value,
+        status.input.value : "False",
 
 
     });
@@ -59,6 +61,7 @@ let createTasks = () => {
             <span class="options">
               <i onClick= "editTask(this)" data-bs-toggle="modal" data-bs-target="#form" class="fas fa-edit"></i>
               <i onClick ="deleteTask(this);createTasks()" class="fas fa-trash-alt"></i>
+              <i onClick= "done(this)"><img src="./src/img/1936474.png" alt="done-icon"></i>
             </span>
           </div>
       `);
@@ -93,10 +96,24 @@ let editTask = (e) => {
     deleteTask(e);
 };
 
+
+
+let deleteAll = () => {
+    localStorage.clear();
+    data = [];
+    createTasks();
+
+}
+
+delete_all.addEventListener("click", deleteAll);
+
+
+// function done() {
+
+// }
+
 (() => {
     data = JSON.parse(localStorage.getItem("data")) || [];
     console.log(data);
     createTasks();
-  })();
-
-  
+})();
