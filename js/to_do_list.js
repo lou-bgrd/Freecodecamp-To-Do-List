@@ -38,7 +38,6 @@ let acceptData = () => {
         text: textInput.value,
         date: dateInput.value,
         description: textarea.value,
-        status.input.value : "False",
 
 
     });
@@ -108,9 +107,9 @@ let deleteAll = () => {
 delete_all.addEventListener("click", deleteAll);
 
 
-// function done() {
+function done() {
 
-// }
+}
 
 (() => {
     data = JSON.parse(localStorage.getItem("data")) || [];
