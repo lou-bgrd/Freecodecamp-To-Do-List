@@ -54,7 +54,12 @@
                             <p>Description</p>
                             <textarea name="" class="form-control" id="textarea" cols="30" rows="5"></textarea>
                             <p>Status</p>
-                            <input type="radio" name="status" id="TaskStatus">
+
+                            <div class="statusOfTask"><input type="radio" name="status" id="TaskStatus1" value="En cours">
+                                <label for="TaskStatus1">En cours</label><input type="radio" name="status2"
+                                    id="TaskStatus2" value="Terminée">
+                                <label for="TaskStatus2">Terminée</label>
+                            </div>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
@@ -67,7 +72,7 @@
             </form>
         </div>
     </div>
-    
+
 </body>
 
 </html>
