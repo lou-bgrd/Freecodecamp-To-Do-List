@@ -22,7 +22,7 @@
 <body>
     <aside class="menu">
         <button type="button" class="btn" id="btn_deleteall">Delete All</button>
-        <div class="categorie task-complete">
+        <div class="categorie" id="task-complete">
             <h2>Tâches complétées :</h2>
         </div>
     </aside>
@@ -55,9 +55,10 @@
                             <textarea name="" class="form-control" id="textarea" cols="30" rows="5"></textarea>
                             <p>Status</p>
 
-                            <div class="statusOfTask"><input type="radio" name="status" id="TaskStatus1" value="En cours">
-                                <label for="TaskStatus1">En cours</label><input type="radio" name="status2"
-                                    id="TaskStatus2" value="Terminée">
+                            <div class="statusOfTask">
+                                <input type="radio" name="status" id="TaskStatus1" value="En-cours">
+                                <label for="TaskStatus1">En cours</label>
+                                <input type="radio" name="status" id="TaskStatus2" value="Terminée">
                                 <label for="TaskStatus2">Terminée</label>
                             </div>
                         </div>
