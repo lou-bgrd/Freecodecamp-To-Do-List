@@ -12,7 +12,8 @@ let tasks = document.getElementById("tasks");
 // conteneur des tâches archivées
 let archive = document.getElementById("task-complete")
 let add = document.getElementById("add");
-let delete_all = document.getElementById("btn_deleteall")
+let yesDelete = document.getElementById("yesDelete")
+
 
 
 
@@ -124,10 +125,16 @@ let deleteAll = () => {
     localStorage.clear();
     data = [];
     createTasks();
+    yesDelete.setAttribute("data-bs-dismiss", "modal");
+        yesDelete.click();
+        (() => {
+            yesDelete.setAttribute("data-bs-dismiss", "");
+        })();
+
 
 }
 
-delete_all.addEventListener("click", deleteAll);
+yesDelete.addEventListener("click", deleteAll);
 
 // CREATE A BUTTON DISPLAYING A DEMO OF A NOTE
 
