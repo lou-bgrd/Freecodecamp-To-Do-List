@@ -1,4 +1,4 @@
-
+import { createDemo } from "./demo.js";
 let form = document.getElementById("form");
 let textInput = document.getElementById("textInput");
 let dateInput = document.getElementById("dateInput");
@@ -133,29 +133,32 @@ delete_all.addEventListener("click", deleteAll);
 
 // CREATE A BUTTON DISPLAYING A DEMO OF A NOTE
 
-let demo = [
-    {
-        "text": "RDV",
-        "date": "25/02/2023",
-        "description": "Dîner au nautique",
-        "status": "En-cours"
-    },
-    {
-        "text": "Commission",
-        "date": "24/02/2023",
-        "description": "Aller au fleuriste acheter des fleurs pour rdv",
-        "status": "En-cours"
-    }
-]
+// let demo = [
+//     {
+//         "text": "RDV",
+//         "date": "25/02/2023",
+//         "description": "Dîner au nautique",
+//         "status": "En-cours"
+//     },
+//     {
+//         "text": "Commission",
+//         "date": "24/02/2023",
+//         "description": "Aller au fleuriste acheter des fleurs pour rdv",
+//         "status": "En-cours"
+//     }
+// ]
 
-function createDemo(e) {
-    data.splice(0, data.length, ...demo);
-    localStorage.setItem("data", JSON.stringify(demo))
+// function createDemo(e) {
+//     data.splice(0, data.length, ...demo);
+//     localStorage.setItem("data", JSON.stringify(demo))
+//     createTasks();
+// }
+
+
+demoBtn.addEventListener("click", (e) => {
+    createDemo(data);
     createTasks();
-}
-
-
-demoBtn.addEventListener("click", createDemo);
+});
 
 
 // STORE DATA ET POSTE

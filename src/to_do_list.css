@@ -1,5 +1,5 @@
 body {
-    font-family: sans-serif;
+    font-family:;
     margin: 0;
     background-color: #fef6e4;
     overflow: hidden;
@@ -26,6 +26,7 @@ body {
     width: 300px;
     border-radius: 8px;
     padding: 15px;
+
 }
 
 #addNew {
@@ -54,7 +55,6 @@ body {
 }
 
 #tasks div {
-    border: 3px solid #dfd3e5;
     background-color: #8bd3dd;
     border-radius: 6px;
     padding: 5px;
@@ -86,3 +86,5 @@ h2 { font-size: 20px;}
     display: flex;
     gap: 16px;
 }
+
+.krecik { height: 100px;}
