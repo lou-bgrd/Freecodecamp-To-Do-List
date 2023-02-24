@@ -54,6 +54,7 @@ let acceptData = () => {
 
 let createTasks = () => {
     tasks.innerHTML = "";
+    archive.innerHTML = "";
     data.map((x, y) => {
         if (x.status === "En-cours") {
             tasks.innerHTML += `
@@ -71,7 +72,8 @@ let createTasks = () => {
       `;
             return tasks;
 
-        } else {
+
+        } else if (x.status === "Terminée") {
             archive.innerHTML += `<div id=${y}>
        <span class="fw-bold">${x.text}</span>
        <span class="small text-secondary">${x.date}</span>
@@ -83,11 +85,13 @@ let createTasks = () => {
          <i id="isDone" onClick="done(this)"><img src="./src/img/1936474.png" alt="done-icon"></i>
        </span>
      </div>
- `}
+ `} return archive;
+
     });
 
     resetForm();
 };
+
 let resetForm = () => {
     textInput.value = "";
     dateInput.value = "";
@@ -139,3 +143,7 @@ function done() {
     console.log(data);
     createTasks();
 })();
+
+
+
+// REGLE LES ID 
