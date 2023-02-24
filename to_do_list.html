@@ -29,14 +29,20 @@
 
     <body>
         <aside class="menu d-flex flex-column g-2">
-            <div class="buttons_layout">
+            <img src="./src/img/logo.svg" alt="logo" />
+            <div class="button-layout">
                 <button type="button" class="btn btn-danger" id="btn_deleteall">
                     Delete All
                 </button>
                 <button type="button" class="btn btn-info" id="demoBtn">
                     Add demo
                 </button>
+                <div id="addNew" data-bs-toggle="modal" data-bs-target="#form">
+                    <span class="p-2 color-black">Add New Task</span>
+                    <i class="fas fa-plus"></i>
+                </div>
             </div>
+
             <h2>Tâches complétées :</h2>
 
             <div class="categorie" id="task-complete"></div>
@@ -46,12 +52,8 @@
             <div class="app">
                 <div>
                     <h4 class="mb-3">TODO App</h4>
-        
                 </div>
-                <div id="addNew" data-bs-toggle="modal" data-bs-target="#form">
-                    <span>Add New Task</span>
-                    <i class="fas fa-plus"></i>
-                </div>
+
                 <h5 class="text-center my-3">Tasks</h5>
                 <div id="tasks"></div>
                 <form

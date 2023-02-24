@@ -1,39 +1,44 @@
 body {
-    font-family:;
+    font-family: ;
     margin: 0;
-    background-color: #fef6e4;
+    background-color: #abd1c6;
     overflow: hidden;
     display: flex;
-    
+
     height: 100vh;
 }
 
 .container {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .menu {
     display: flex;
+    flex-wrap: wrap;
     gap: 25px;
-    background-color: #f3d2c1;
-    height: 100%;
-    padding: 24px;
-    width: 25%;
+    background-color: #00332c;
+    padding: 36px;
+    color: white;
 }
 
+.color-black {
+    color: black;
+}
 .app {
-    background-color: #fef6e4;
+    background-color: #abd1c6;
     width: 300px;
-    border-radius: 8px;
     padding: 15px;
-
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 #addNew {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color:#8bd3dd;
+    background-color: #fffffe;
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
@@ -55,9 +60,10 @@ body {
 }
 
 #tasks div {
-    background-color: #8bd3dd;
+    background-color: #fffffe;
+    color: #0f0e17;
     border-radius: 6px;
-    padding: 5px;
+    padding: 16px;
     display: grid;
     gap: 4px;
 }
@@ -77,14 +83,33 @@ i img {
     vertical-align: top;
 }
 
-.statusOfTask { display: flex;
-gap: 6px;}
-
-h2 { font-size: 20px;}
-
-.buttons_layout {
+.statusOfTask {
     display: flex;
-    gap: 16px;
+    gap: 6px;
 }
 
-.krecik { height: 100px;}
+h2 {
+    font-size: 20px;
+    color: white;
+}
+
+.menu-top {
+    display: flex;
+    gap: 8px;
+    justify-content: space-between;
+}
+
+.button-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+.krecik {
+    height: 100px;
+}
+
+.btn-info {
+    background-color: #dfd3e5;
+    border-style: none;
+}

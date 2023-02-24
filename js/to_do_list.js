@@ -1,4 +1,5 @@
 import { createDemo } from "./demo.js";
+import { sanitizeInput } from "./prevent_codeInjec.js";
 let form = document.getElementById("form");
 let textInput = document.getElementById("textInput");
 let dateInput = document.getElementById("dateInput");
@@ -12,6 +13,8 @@ let tasks = document.getElementById("tasks");
 let archive = document.getElementById("task-complete")
 let add = document.getElementById("add");
 let delete_all = document.getElementById("btn_deleteall")
+
+
 
 
 // Validation formulaire (ne peut pas être vide)
@@ -41,10 +44,10 @@ let data = [];
 
 let acceptData = () => {
     data.push({
-        text: textInput.value,
-        date: dateInput.value,
-        description: textarea.value,
-        status: statusInput.value,
+        text: sanitizeInput(textInput.value),
+        date: sanitizeInput(dateInput.value),
+        description: sanitizeInput(textarea.value),
+        status: sanitizeInput(statusInput.value),
     });
 
     localStorage.setItem("data", JSON.stringify(data));
@@ -80,11 +83,6 @@ let createTasks = () => {
        <span class="small text-secondary">${x.date}</span>
        <p>${x.description}</p>
 
-       <span class="options">
-         <i onClick="editTask(this)" data-bs-toggle="modal" data-bs-target="#form" class="fas fa-edit"></i>
-         <i onClick="deleteTask(this);createTasks()" class="fas fa-trash-alt"></i>
-         <i id="isDone" onClick="done(this)"><img src="./src/img/1936474.png" alt="done-icon"></i>
-       </span>
      </div>
  `} return archive;
 

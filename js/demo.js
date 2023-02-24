@@ -14,7 +14,7 @@ let demo = [
 ]
 
 export function createDemo(array) {
-    array.push (...demo);
+    array.push(...demo);
     localStorage.setItem("data", JSON.stringify(array));
-    
+
 }
