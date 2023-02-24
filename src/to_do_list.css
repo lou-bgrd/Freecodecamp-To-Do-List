@@ -59,7 +59,7 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     gap: 14px;
-    max-width: 500px;
+    max-width: 300px;
 }
 
 #tasks div {
