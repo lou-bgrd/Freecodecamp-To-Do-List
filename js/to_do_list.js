@@ -13,6 +13,7 @@ let archive = document.getElementById("task-complete")
 let add = document.getElementById("add");
 let delete_all = document.getElementById("btn_deleteall")
 
+
 // Validation formulaire (ne peut pas être vide)
 form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -130,20 +131,43 @@ let deleteAll = () => {
 
 delete_all.addEventListener("click", deleteAll);
 
+// CREATE A BUTTON DISPLAYING A DEMO OF A NOTE
 
-function done() {
-    const tache = document.getElementById("isDone").parentElement;
+let demo = [
+    {
+        "text": "RDV",
+        "date": "25/02/2023",
+        "description": "Dîner au nautique",
+        "status": "En-cours"
+    },
+    {
+        "text": "Commission",
+        "date": "24/02/2023",
+        "description": "Aller au fleuriste acheter des fleurs pour rdv",
+        "status": "En-cours"
+    }
+]
 
-
+function createDemo(e) {
+    data.splice(0, data.length, ...demo);
+    localStorage.setItem("data", JSON.stringify(demo))
+    createTasks();
 }
+
+
+demoBtn.addEventListener("click", createDemo);
+
 
 // STORE DATA ET POSTE
 (() => {
     data = JSON.parse(localStorage.getItem("data")) || [];
     console.log(data);
+
     createTasks();
 })();
 
 
 
 // REGLE LES ID 
+
+
